@@ -38,7 +38,10 @@ export const BodyImage = styled.img`
     justify-content: center;
     width: 100%;
     position: absolute;
-    z-index: -1
+    z-index: -1;
+    @media (max-width: 768px) {
+        display: flex;
+    }
 `
 export const Search = styled.input`
     width: 40%;
@@ -92,4 +95,8 @@ export const MouseImage = styled.img`
     display: flex;
     left: 1000px;
     top: 1300px;
+    @media (max-width: 768px) {
+        left: 100px;
+        top: 2250px;
+    }
 `
