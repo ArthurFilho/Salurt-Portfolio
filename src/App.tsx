@@ -1,10 +1,12 @@
 import { DefaultTheme } from "./styles/themes/default";
 import { ThemeProvider } from 'styled-components'
 import { GlobalStyle } from "./styles/global";
-import { BodyImage, ContainerBody, ContainerScreens, ContainerSearch, Search } from "./styles/themes/style";
+import { BodyImage, ContainerBody, ContainerScreens, ContainerSearch, MouseImage, Search } from "./styles/themes/style";
 
 import Logo from "../src/assets/logo.png"
 import Venda from "../src/assets/imagesScreen/venda.png"
+import Verify from "../src/assets/list/verificado.png"
+import Mouse from "../src/assets/list/mouse.png"
 
 export function App() {
 
@@ -23,12 +25,14 @@ export function App() {
          </p>
 
          <ContainerScreens>
+         
            <div>  <img src={Venda} />  </div> 
            <div>  <img src={Venda} />  </div>
            <div>  <img src={Venda} />  </div>
            <div>  <img src={Venda} />  </div>
            <div>  <img src={Venda} />  </div>
            <div>  <img src={Venda} />  </div>
+         
          </ContainerScreens>
 
          <p>
@@ -36,11 +40,11 @@ export function App() {
          <br /> CRIATIVIDADE LEVAR É O NOSSO LIMITE
          </p>
 
-
-
          <ul>
         
         <li>
+
+        <img src={Verify} width="50px" height="50px" />
 
           Site 100% SEGURO e CONFIAVEL
         
@@ -48,23 +52,33 @@ export function App() {
 
         <li>
 
+        <img src={Verify} width="50px" height="50px" />
+
           Artes 100% ORIGINAIS , e bem TRABALHADAS
-        
+
         </li>
 
         <li>
 
-          Visamos o conforto do CLIENTE e dos seus Visitantes
+        <img src={Verify} width="50px" height="50px" />
+
+          Visamos o conforto do CLIENTE e dos seus Visitantes    
     
         </li>
 
         <li>
 
+        <img src={Verify} width="50px" height="50px" />
+
           Mesma equipe previne DEMORA e entrega do seu produto
-          mais rapido e acessivel
+          mais rapido e acessivel          
+
+          <MouseImage src={Mouse} />
+
         </li>
-        
+
         </ul>
+         
          
 
         <div>

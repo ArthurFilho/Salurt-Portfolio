@@ -12,9 +12,13 @@ export const ContainerBody = styled.div`
     ul {
         margin-top: 50px;
         font-size: 20px;
+        margin-bottom: 50px;
         
         li {
+            display: flex;
             margin-bottom: 15px;
+            list-style: none;
+            align-items: center;
     }
     }
 
@@ -67,9 +71,9 @@ export const ContainerScreens = styled.div`
     height: 100%;
     align-items: center;
     justify-content: center;
+    margin-bottom: 150px;
 
     div {
-        background-color: black;
         box-shadow:  0 0 1em rgba(255,255,255, 0.5);
         position: relative;
     }
@@ -78,4 +82,14 @@ export const ContainerScreens = styled.div`
         width: 400px;
         height: 200px;
     }
+`
+
+export const MouseImage = styled.img`
+    width: 500px; 
+    height: 500px;    
+    position: absolute;
+    z-index: -1;
+    display: flex;
+    left: 1000px;
+    top: 1300px;
 `
