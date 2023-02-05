@@ -13,6 +13,8 @@ export const DefaultTheme = {
     'gray-600': '#121414',
     
     'cian-100': '#395069',
+
+    'gray-color': '#757575',
    
     
   } as const

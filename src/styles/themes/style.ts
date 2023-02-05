@@ -7,6 +7,17 @@ export const ContainerBody = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    ;
+
+    ul {
+        margin-top: 50px;
+        font-size: 20px;
+        
+        li {
+            margin-bottom: 15px;
+    }
+    }
+
     p {
         margin-top: 50px;
         color: white;
@@ -23,6 +34,7 @@ export const BodyImage = styled.img`
     justify-content: center;
     width: 100%;
     position: absolute;
+    z-index: -1
 `
 export const Search = styled.input`
     width: 40%;
@@ -48,7 +60,7 @@ export const ContainerSearch = styled.div`
 
 export const ContainerScreens = styled.div`
     display: flex;
-    gap: 20px;
+    gap: 40px;
     margin-top: 100px;
     flex-wrap: wrap;
     width: 100%;
@@ -57,11 +69,13 @@ export const ContainerScreens = styled.div`
     justify-content: center;
 
     div {
-        box-shadow: 0px 10px -14px 14px #FFF;
+        background-color: black;
+        box-shadow:  0 0 1em rgba(255,255,255, 0.5);
+        position: relative;
     }
 
     img {
-        width:  400px;
+        width: 400px;
         height: 200px;
     }
 `
