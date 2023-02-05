@@ -1,12 +1,14 @@
 import { DefaultTheme } from "./styles/themes/default";
 import { ThemeProvider } from 'styled-components'
 import { GlobalStyle } from "./styles/global";
-import { BodyImage, ContainerBody, ContainerScreens, ContainerSearch, MouseImage, Search } from "./styles/themes/style";
+import { BodyImage, ContainerBody, ContainerContacts, ContainerScreens, ContainerSearch, MouseImage, Search } from "./styles/themes/style";
 
 import Logo from "../src/assets/logo.png"
 import Venda from "../src/assets/imagesScreen/venda.png"
 import Verify from "../src/assets/list/verificado.png"
 import Mouse from "../src/assets/list/mouse.png"
+import Face from "../src/assets/contacts/face.png"
+import Insta from "../src/assets/contacts/insta.png"
 
 export function App() {
 
@@ -94,7 +96,7 @@ export function App() {
       
         <p> CONTATOS </p> 
 
-        <div>  </div>
+        <ContainerContacts> <img src={Face} width="100px" /> <img src={Insta} width="150px" /> </ContainerContacts>
 
       </ContainerBody>
 

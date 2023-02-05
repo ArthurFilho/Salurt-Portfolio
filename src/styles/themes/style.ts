@@ -7,7 +7,6 @@ export const ContainerBody = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    ;
 
     ul {
         margin-top: 50px;
@@ -99,4 +98,10 @@ export const MouseImage = styled.img`
         left: 100px;
         top: 2250px;
     }
+`
+
+export const ContainerContacts = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `
