@@ -1,7 +1,7 @@
 import { DefaultTheme } from "./styles/themes/default";
 import { ThemeProvider } from 'styled-components'
 import { GlobalStyle } from "./styles/global";
-import { BodyImage, ContainerBody, ContainerContacts, ContainerScreens, ContainerSearch, MouseImage, Search } from "./styles/themes/style";
+import { BodyImage, ContainerBody, ContainerContacts, ContainerScreens, ContainerSearch, MouseImage, NotFound, Search } from "./styles/themes/style";
 
 import Logo from "../src/assets/logo.png"
 import Venda from "../src/assets/imagesScreen/venda.png"
@@ -9,18 +9,25 @@ import Verify from "../src/assets/list/verificado.png"
 import Mouse from "../src/assets/list/mouse.png"
 import Face from "../src/assets/contacts/face.png"
 import Insta from "../src/assets/contacts/insta.png"
+import { useState } from "react";
+import { ClipboardText } from "phosphor-react";
 
 export function App() {
 
+  const [text, setText] = useState('')
 
   return (
     <ThemeProvider theme={DefaultTheme}>
-      <BodyImage src={Logo}/>
-      <ContainerBody>
-        <ContainerSearch>
+      <ContainerSearch>
         <img src={Logo} width="90px" />
-        <Search type="text" placeholder="PESQUISE NA SALURT SEU MODELO" />
-        </ContainerSearch>
+        <Search 
+          type="text" 
+          placeholder="PESQUISE NA SALURT SEU MODELO" 
+          onChange={event => setText(event.target.value)} />
+      </ContainerSearch>
+      <BodyImage src={Logo}/>
+       {text === '' ? <ContainerBody>
+        
         <p>
           CRIE CONOSCO SEU SITE DE QUALQUER TEMA
              <br />  EXEMPLOS DE SITES
@@ -98,9 +105,7 @@ export function App() {
 
         <ContainerContacts> <img src={Face} width="100px" /> <img src={Insta} width="150px" /> </ContainerContacts>
 
-      </ContainerBody>
-
-      
+      </ContainerBody> : <NotFound> "{text}" não foi encontrado. <ClipboardText color="white" size={150}/> </NotFound> }
 
       <GlobalStyle />
       </ThemeProvider>

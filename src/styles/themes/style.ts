@@ -70,10 +70,13 @@ export const ContainerScreens = styled.div`
     margin-top: 100px;
     flex-wrap: wrap;
     width: 100%;
-    height: 100%;
+    height: 500px;
     align-items: center;
     justify-content: center;
     margin-bottom: 150px;
+    @media (max-width: 768px) {
+        height: 1450px;
+    }
 
     div {
         box-shadow:  0 0 1em rgba(255,255,255, 0.5);
@@ -96,7 +99,7 @@ export const MouseImage = styled.img`
     top: 1300px;
     @media (max-width: 768px) {
         left: 100px;
-        top: 2250px;
+        top: 2280px;
     }
 `
 
@@ -104,4 +107,11 @@ export const ContainerContacts = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+`
+
+export const NotFound = styled.h1`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 `
