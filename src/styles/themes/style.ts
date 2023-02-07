@@ -78,6 +78,7 @@ export const ContainerScreens = styled.div`
     
 
     div {
+        cursor: pointer;
         box-shadow:  0 0 1em rgba(255,255,255, 0.5);
         position: relative;
         transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
