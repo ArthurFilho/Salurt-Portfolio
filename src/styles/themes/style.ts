@@ -70,22 +70,41 @@ export const ContainerScreens = styled.div`
     margin-top: 100px;
     flex-wrap: wrap;
     width: 100%;
-    height: 500px;
+    height: 580px;
     align-items: center;
     justify-content: center;
     margin-bottom: 150px;
-    @media (max-width: 768px) {
-        height: 1450px;
-    }
+    
+    
 
     div {
         box-shadow:  0 0 1em rgba(255,255,255, 0.5);
         position: relative;
+        transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+    div:after{
+        content:"";
+        position:absolute;
+        width:100%;
+        height:100%;
+        background-color:#0CF;
+        border-radius:5px;
+        box-shadow:0 5px 15px 0 rgba(0,0,0,0.3);
+        transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        z-index: -1;
+    }
+
+    div:hover{
+      transform:scale(1.09,1.09);
     }
 
     img {
         width: 400px;
         height: 200px;
+    }
+
+    @media (max-width: 768px) {
+        height: 1450px;
     }
 `
 
@@ -107,6 +126,7 @@ export const ContainerContacts = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    
 `
 
 export const NotFound = styled.h1`
