@@ -36,7 +36,7 @@ const ImagesBox : any = [
   {
     id: 1,
     imageUrl: Venda,
-     imageUrlWhite: VendaWhite,
+    imageUrlWhite: VendaWhite,
   },
   {
     id: 2,
@@ -56,7 +56,7 @@ const ImagesBox : any = [
   {
     id: 5,
     imageUrl: Informe,
-   imageUrlWhite: InformeWhite,
+    imageUrlWhite: InformeWhite,
   },
   {
     id: 6,
@@ -72,7 +72,7 @@ export function App() {
 
   const [text, setText] = useState('')
 
-  const [hover, setHover] = useState()
+  const [hover, setHover] = useState(0)
 
   return (
     <ThemeProvider theme={DefaultTheme}>
@@ -93,9 +93,11 @@ export function App() {
 
          <ContainerScreens>
          
-           {ImagesBox.map(InfoImg => {
+           {ImagesBox.map((InfoImg :any) => {
             return(
-              <div onMouseOver={() => {setHover(InfoImg.id)}} onMouseOut={() => {setHover(0)}} key={InfoImg.id}>  {hover == InfoImg.id ? <img src={InfoImg.imageUrlWhite} /> : <img src={InfoImg.imageUrl} />} </div>
+              <div onMouseOver={() => {setHover(InfoImg.id)}} onMouseOut={() => {setHover(0)}} key={InfoImg.id}>  
+                {hover == InfoImg.id ? <img src={InfoImg.imageUrlWhite} /> : <img src={InfoImg.imageUrl} />} 
+              </div>
             )
            }) } 
           
