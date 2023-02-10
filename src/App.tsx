@@ -26,8 +26,13 @@ import Informe from "../src/assets/imagesScreen/informe.png"
 import Stream from "../src/assets/imagesScreen/stream.png"
 
 import VendaWhite from "../src/assets/imagesScreen/venda_branco.png"
+import JogosWhite from "../src/assets/imagesScreen/jogos_branco.png"
+import SocialWhite from "../src/assets/imagesScreen/social_branco.png"
+import ModaWhite from "../src/assets/imagesScreen/moda_branco.png"
+import InformeWhite from "../src/assets/imagesScreen/informe_branco.png"
+import StreamWhite from "../src/assets/imagesScreen/stream_branco.png"
 
-const ImagesBox = [
+const ImagesBox : any = [
   {
     id: 1,
     imageUrl: Venda,
@@ -36,27 +41,27 @@ const ImagesBox = [
   {
     id: 2,
     imageUrl: Jogos,
-   //imageUrlWhite: ,
+    imageUrlWhite: JogosWhite,
   },
   {
     id: 3,
     imageUrl: Social,
-   // imageUrlWhite: ,
+    imageUrlWhite: SocialWhite,
   },
   {
     id: 4,
     imageUrl: Moda,
-    //imageUrlWhite: ,
+    imageUrlWhite: ModaWhite,
   },
   {
     id: 5,
     imageUrl: Informe,
-   // imageUrlWhite: ,
+   imageUrlWhite: InformeWhite,
   },
   {
     id: 6,
     imageUrl: Stream,
-   // imageUrlWhite: ,
+    imageUrlWhite: StreamWhite,
   },
 ]
 
@@ -67,9 +72,7 @@ export function App() {
 
   const [text, setText] = useState('')
 
-  function ChangeImage(props : any) {
-
-  }
+  const [hover, setHover] = useState()
 
   return (
     <ThemeProvider theme={DefaultTheme}>
@@ -92,7 +95,7 @@ export function App() {
          
            {ImagesBox.map(InfoImg => {
             return(
-              <div onMouseOver={ChangeImage(InfoImg.id)} key={InfoImg.id}>  {true ? <img src={InfoImg.imageUrl} /> : <img src={InfoImg.imageUrlWhite} />} </div>
+              <div onMouseOver={() => {setHover(InfoImg.id)}} onMouseOut={() => {setHover(0)}} key={InfoImg.id}>  {hover == InfoImg.id ? <img src={InfoImg.imageUrlWhite} /> : <img src={InfoImg.imageUrl} />} </div>
             )
            }) } 
           
