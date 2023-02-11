@@ -37,31 +37,37 @@ const ImagesBox : any = [
     id: 1,
     imageUrl: Venda,
     imageUrlWhite: VendaWhite,
+    linkUrl: `https://coffees-delivery.netlify.app/`,
   },
   {
     id: 2,
     imageUrl: Jogos,
     imageUrlWhite: JogosWhite,
+    linkUrl: `https://coffees-delivery.netlify.app/`,
   },
   {
     id: 3,
     imageUrl: Social,
     imageUrlWhite: SocialWhite,
+    linkUrl: `https://networking-feed.netlify.app/`,
   },
   {
     id: 4,
     imageUrl: Moda,
     imageUrlWhite: ModaWhite,
+    linkUrl: `https://coffees-delivery.netlify.app/`,
   },
   {
     id: 5,
     imageUrl: Informe,
     imageUrlWhite: InformeWhite,
+    linkUrl: `https://pomodorotimerp.netlify.app/`,
   },
   {
     id: 6,
     imageUrl: Stream,
     imageUrlWhite: StreamWhite,
+    linkUrl: `https://coffees-delivery.netlify.app/`,
   },
 ]
 
@@ -96,7 +102,7 @@ export function App() {
            {ImagesBox.map((InfoImg :any) => {
             return(
               <div onMouseOver={() => {setHover(InfoImg.id)}} onMouseOut={() => {setHover(0)}} key={InfoImg.id}>  
-                {hover == InfoImg.id ? <img src={InfoImg.imageUrlWhite} /> : <img src={InfoImg.imageUrl} />} 
+                {hover == InfoImg.id ? <a href={InfoImg.linkUrl}> <img src={InfoImg.imageUrlWhite} /> </a> : <a href={InfoImg.linkUrl}> <img src={InfoImg.imageUrl} /> </a>} 
               </div>
             )
            }) } 
@@ -146,8 +152,6 @@ export function App() {
         </li>
 
         </ul>
-         
-         
 
         <div>
         <p> O que ganhamos com isso ? </p>
@@ -162,7 +166,7 @@ export function App() {
       
         <p> CONTATOS </p> 
 
-        <ContainerContacts> <img src={Face} width="48px" /> <img src={Insta} width="48px" /> </ContainerContacts>
+        <ContainerContacts> <a href="#"> <img src={Face} width="48px" /> </a> <a href="#"> <img src={Insta} width="48px" /> </a> </ContainerContacts>
 
       </ContainerBody> : <NotFound> "{text}" não foi encontrado. <ClipboardText color="white" size={150}/> </NotFound> }
 

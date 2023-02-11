@@ -16,6 +16,6 @@ body {
     color: white;
 }
 body, input-security, textarea, button {
-    font: 400 1rem Roboto, sans-serif;
+    font: 400 1rem 'Corbel', sans-serif;
 }
 `
