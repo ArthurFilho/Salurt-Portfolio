@@ -74,7 +74,7 @@ export const ContainerScreens = styled.div`
     align-items: center;
     justify-content: center;
     margin-bottom: 150px;
-    
+    overflow-y: hidden;
     
 
     div {
@@ -105,7 +105,7 @@ export const ContainerScreens = styled.div`
     }
 
     @media (max-width: 768px) {
-        height: 1450px;
+        height: 1470px;
     }
 `
 
@@ -126,6 +126,8 @@ export const MouseImage = styled.img`
 export const ContainerContacts = styled.div`
     display: flex;
     align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
     gap: 20px;
     img {
         background: white;
