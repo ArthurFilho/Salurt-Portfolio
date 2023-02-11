@@ -15,8 +15,8 @@ import Logo from "../src/assets/logo.png"
 import Verify from "../src/assets/list/verificado.png"
 import Mouse from "../src/assets/list/mouse.png"
 
-import Face from "../src/assets/contacts/face.png"
-import Insta from "../src/assets/contacts/insta.png"
+import Face from "../src/assets/contacts/face.svg"
+import Insta from "../src/assets/contacts/insta.svg"
 
 import Venda from "../src/assets/imagesScreen/venda.png"
 import Jogos from "../src/assets/imagesScreen/jogos.png"
@@ -162,7 +162,7 @@ export function App() {
       
         <p> CONTATOS </p> 
 
-        <ContainerContacts> <img src={Face} width="48px" /> <img src={Insta} width="150px" /> </ContainerContacts>
+        <ContainerContacts> <img src={Face} width="48px" /> <img src={Insta} width="48px" /> </ContainerContacts>
 
       </ContainerBody> : <NotFound> "{text}" não foi encontrado. <ClipboardText color="white" size={150}/> </NotFound> }
 

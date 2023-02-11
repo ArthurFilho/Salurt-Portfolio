@@ -126,8 +126,11 @@ export const MouseImage = styled.img`
 export const ContainerContacts = styled.div`
     display: flex;
     align-items: center;
-    justify-content: center;
-    
+    gap: 20px;
+    img {
+        background: white;
+        border-radius: 100%;
+    }
 `
 
 export const NotFound = styled.h1`
