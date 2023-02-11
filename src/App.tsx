@@ -102,7 +102,10 @@ export function App() {
            {ImagesBox.map((InfoImg :any) => {
             return(
               <div onMouseOver={() => {setHover(InfoImg.id)}} onMouseOut={() => {setHover(0)}} key={InfoImg.id}>  
-                {hover == InfoImg.id ? <a href={InfoImg.linkUrl}> <img src={InfoImg.imageUrlWhite} /> </a> : <a href={InfoImg.linkUrl}> <img src={InfoImg.imageUrl} /> </a>} 
+                {hover == InfoImg.id ? 
+                <a href={InfoImg.linkUrl}> <img src={InfoImg.imageUrlWhite} /> </a> 
+                : 
+                <a href={InfoImg.linkUrl}> <img src={InfoImg.imageUrl} /> </a>} 
               </div>
             )
            }) } 
@@ -111,7 +114,7 @@ export function App() {
 
          <p>
              ESSES E OUTROS DIVERSOS TEMAS O QUE SUA
-         <br /> CRIATIVIDADE LEVAR É O NOSSO LIMITE
+         <br /> CRIATIVIDADE LEVAR É O NOSSO LIMITE!
          </p>
 
          <ul>
@@ -120,7 +123,7 @@ export function App() {
 
         <img src={Verify} width="50px" height="50px" />
 
-          Site 100% SEGURO e CONFIAVEL
+          Site 100% SEGURO e CONFIAVEL!
         
         </li>
 
@@ -128,7 +131,7 @@ export function App() {
 
         <img src={Verify} width="50px" height="50px" />
 
-          Artes 100% ORIGINAIS , e bem TRABALHADAS
+          Artes 100% ORIGINAIS , e bem TRABALHADAS!
 
         </li>
 
@@ -136,7 +139,7 @@ export function App() {
 
         <img src={Verify} width="50px" height="50px" />
 
-          Visamos o conforto do CLIENTE e dos seus Visitantes    
+          Visamos o conforto do CLIENTE e dos seus Visitantes ! 
     
         </li>
 
@@ -145,7 +148,7 @@ export function App() {
         <img src={Verify} width="50px" height="50px" />
 
           Mesma equipe previne DEMORA e entrega do seu produto
-          mais rapido e acessivel          
+          mais rapido e acessivel !      
 
           <MouseImage src={Mouse} />
 
@@ -156,17 +159,20 @@ export function App() {
         <div>
         <p> O que ganhamos com isso ? </p>
 
-        <p> Sua confiança e lealdade porque visamos o melhor dos nossos clientes <br /> 
-        , para que fiquem 100% tranquilos com seus projetos em nossas mãos , <br /> 
+        <p> Sua confiança e lealdade porque visamos o melhor dos nossos clientes, <br /> 
+         para que fiquem 100% tranquilos com seus projetos em nossas mãos , <br /> 
          somos jovens e estamos trazendo nosso estudo para esse mercado <br />
-          de trabalho privilegiado  </p> 
+          de trabalho privilegiado.  </p> 
         </div>
 
         <p> Caso tenha gostado entre em contato conosco e faça seu orçamento: </p>
       
         <p> CONTATOS </p> 
 
-        <ContainerContacts> <a href="#"> <img src={Face} width="48px" /> </a> <a href="#"> <img src={Insta} width="48px" /> </a> </ContainerContacts>
+        <ContainerContacts> 
+          <a href="#"> <img src={Face} width="48px" /> </a> 
+          <a href="#"> <img src={Insta} width="48px" /> </a> 
+        </ContainerContacts>
 
       </ContainerBody> : <NotFound> "{text}" não foi encontrado. <ClipboardText color="white" size={150}/> </NotFound> }
 
