@@ -15,4 +15,4 @@
 
 <h1> Descrição </h1>
 <p> Projeto feito com o intuito de ser um portfólio para um projeto que fiz com um amigo, onde faremos freelancers com trabalho dublo
-eu como programador e ele designer. </p>
+eu como programador e ele designer. (EM ANDAMENTO)</p>
