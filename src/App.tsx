@@ -171,7 +171,6 @@ export function App() {
 
         <ContainerContacts> 
           <a href="https://www.instagram.com/salurtcompany/"> <img src={Face} width="48px" /> </a> 
-          <a href="https://www.instagram.com/salurtcompany/"> <img src={Face} width="48px" /> </a> 
           <a href="https://www.instagram.com/salurtcompany/"> <img src={Insta} width="48px" /> </a> 
         </ContainerContacts>
 
