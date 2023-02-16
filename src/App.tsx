@@ -170,8 +170,9 @@ export function App() {
         <p> CONTATOS </p> 
 
         <ContainerContacts> 
-          <a href="#"> <img src={Face} width="48px" /> </a> 
-          <a href="#"> <img src={Insta} width="48px" /> </a> 
+          <a href="https://www.instagram.com/salurtcompany/"> <img src={Face} width="48px" /> </a> 
+          <a href="https://www.instagram.com/salurtcompany/"> <img src={Face} width="48px" /> </a> 
+          <a href="https://www.instagram.com/salurtcompany/"> <img src={Insta} width="48px" /> </a> 
         </ContainerContacts>
 
       </ContainerBody> : <NotFound> "{text}" não foi encontrado. <ClipboardText color="white" size={150}/> </NotFound> }
