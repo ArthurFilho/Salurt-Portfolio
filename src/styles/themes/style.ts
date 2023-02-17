@@ -74,34 +74,30 @@ export const ContainerScreens = styled.div`
     align-items: center;
     justify-content: center;
     margin-bottom: 150px;
-    overflow-y: hidden;
-    
 
     div {
         cursor: pointer;
         box-shadow:  0 0 1em rgba(255,255,255, 0.5);
-        position: relative;
         transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        width: 400px;
+        height: 200px;
     }
-    div:after{
-        content:"";
-        position:absolute;
-        width:100%;
-        height:100%;
-        background-color:#0CF;
-        border-radius:5px;
-        box-shadow:0 5px 15px 0 rgba(0,0,0,0.3);
-        transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-        z-index: -1;
-    }
-
+   
     div:hover{
       transform:scale(1.09,1.09);
     }
 
+    a {
+        width: 100%;
+        height: 100%;
+    }
+
     img {
-        width: 400px;
-        height: 200px;
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
     }
 
     @media (max-width: 768px) {
