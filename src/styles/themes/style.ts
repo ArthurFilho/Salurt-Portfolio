@@ -18,7 +18,7 @@ export const ContainerBody = styled.div`
             margin-bottom: 15px;
             list-style: none;
             align-items: center;
-    }
+        }
     }
 
     p {
@@ -38,6 +38,7 @@ export const BodyImage = styled.img`
     width: 100%;
     position: absolute;
     z-index: -1;
+    
     @media (max-width: 768px) {
         display: flex;
     }
@@ -113,6 +114,7 @@ export const MouseImage = styled.img`
     display: flex;
     left: 1000px;
     top: 1300px;
+    
     @media (max-width: 768px) {
         left: 100px;
         top: 2280px;
@@ -125,6 +127,7 @@ export const ContainerContacts = styled.div`
     margin-top: 10px;
     margin-bottom: 10px;
     gap: 20px;
+    
     img {
         background: white;
         border-radius: 100%;
