@@ -32,7 +32,14 @@ import ModaWhite from "../src/assets/imagesScreen/moda_branco.png"
 import InformeWhite from "../src/assets/imagesScreen/informe_branco.png"
 import StreamWhite from "../src/assets/imagesScreen/stream_branco.png"
 
-const ImagesBox : any = [
+interface ImagesProps {
+  id: number,
+  imageUrl: string,
+  imageUrlWhite: string,
+  linkUrl: string,
+}
+
+const ImagesBox : Array<ImagesProps> = [
   {
     id: 1,
     imageUrl: Venda,
@@ -43,7 +50,7 @@ const ImagesBox : any = [
     id: 2,
     imageUrl: Jogos,
     imageUrlWhite: JogosWhite,
-    linkUrl: `https://coffees-delivery.netlify.app/`,
+    linkUrl: `https://animal-da-sorte.netlify.app`,
   },
   {
     id: 3,
@@ -55,7 +62,7 @@ const ImagesBox : any = [
     id: 4,
     imageUrl: Moda,
     imageUrlWhite: ModaWhite,
-    linkUrl: `https://coffees-delivery.netlify.app/`,
+    linkUrl: `https://moda-salurt.netlify.app`,
   },
   {
     id: 5,
@@ -67,7 +74,7 @@ const ImagesBox : any = [
     id: 6,
     imageUrl: Stream,
     imageUrlWhite: StreamWhite,
-    linkUrl: `https://coffees-delivery.netlify.app/`,
+    linkUrl: `https://animal-da-sorte.netlify.app`,
   },
 ]
 
@@ -99,7 +106,7 @@ export function App() {
 
          <ContainerScreens>
          
-           {ImagesBox.map((InfoImg :any) => {
+           {ImagesBox.map((InfoImg) => {
             return(
               <div onMouseOver={() => {setHover(InfoImg.id)}} onMouseOut={() => {setHover(0)}} key={InfoImg.id}>  
                 {hover == InfoImg.id ? 
